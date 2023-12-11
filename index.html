@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roofing System Wind Load Calculator</title>
+    <title>Roofing System Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Roofing System Wind Load Calculator</h1>
+        <h1>Roofing System Calculator</h1>
         
+        <!-- Wind Load Calculation Section -->
+        <h2>Wind Load Calculation</h2>
         <div class="input-section">
-            <label for="sustainedPressure">Enter Sustained Pressure (SP) in kPa:</label>
-            <input type="number" id="sustainedPressure" placeholder="Sustained Pressure in kPa">
+            <label for="buildingHeight">Building Height (meters):</label>
+            <input type="number" id="buildingHeight" placeholder="Building Height">
+
+            <label for="roofWidth">Roof Width (meters):</label>
+            <input type="number" id="roofWidth" placeholder="Roof Width">
+
+            <label for="roofLength">Roof Length (meters):</label>
+            <input type="number" id="roofLength" placeholder="Roof Length">
+
+            <label for="locationFactor">Geographic Location Factor:</label>
+            <input type="number" id="locationFactor" placeholder="Location Factor">
         </div>
 
-        <button onclick="calculateResistance()">Calculate Roofing System Resistance</button>
+        <!-- Roofing Assembly Selection -->
+        <h2>Select Roofing Assembly</h2>
+        <div class="input-section">
+            <label for="assemblySelect">Roofing Assembly:</label>
+            <select id="assemblySelect">
+                <!-- Assembly options will be added here -->
+            </select>
+        </div>
 
+        <button onclick="performCalculations()">Calculate</button>
+
+        <!-- Results Section -->
         <div class="output-section">
-            <p id="result"></p>
+            <h2>Results</h2>
+            <p id="windLoadResult"></p>
+            <p id="assemblyResult"></p>
         </div>
     </div>
 
