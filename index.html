@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roofing System Wind Load Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Roofing System Wind Load Calculator</h1>
+        
+        <div class="input-section">
+            <label for="sustainedPressure">Enter Sustained Pressure (SP) in kPa:</label>
+            <input type="number" id="sustainedPressure" placeholder="Sustained Pressure in kPa">
+        </div>
+
+        <button onclick="calculateResistance()">Calculate Roofing System Resistance</button>
+
+        <div class="output-section">
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
