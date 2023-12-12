@@ -11,34 +11,44 @@
         <h1>Roofing System Calculator</h1>
         
         <!-- Wind Load Calculation Section -->
-        <h2>Wind Load Calculation</h2>
-        <div class="input-section">
-            <label for="buildingHeight">Building Height (meters):</label>
-            <input type="number" id="buildingHeight" placeholder="Building Height">
+        <div class="section">
+            <h2>Wind Load Calculation</h2>
+            <div class="input-group">
+                <label for="buildingHeight">Building Height (m):</label>
+                <input type="number" id="buildingHeight" placeholder="Building Height">
+            </div>
 
-            <label for="roofWidth">Roof Width (meters):</label>
-            <input type="number" id="roofWidth" placeholder="Roof Width">
+            <div class="input-group">
+                <label for="roofWidth">Roof Width (m):</label>
+                <input type="number" id="roofWidth" placeholder="Roof Width">
+            </div>
 
-            <label for="roofLength">Roof Length (meters):</label>
-            <input type="number" id="roofLength" placeholder="Roof Length">
+            <div class="input-group">
+                <label for="roofLength">Roof Length (m):</label>
+                <input type="number" id="roofLength" placeholder="Roof Length">
+            </div>
 
-            <label for="locationFactor">Geographic Location Factor:</label>
-            <input type="number" id="locationFactor" placeholder="Location Factor">
+            <div class="input-group">
+                <label for="locationFactor">Location Factor:</label>
+                <input type="number" id="locationFactor" placeholder="Location Factor">
+            </div>
         </div>
 
         <!-- Roofing Assembly Selection -->
-        <h2>Select Roofing Assembly</h2>
-        <div class="input-section">
-            <label for="assemblySelect">Roofing Assembly:</label>
-            <select id="assemblySelect">
-                <!-- Assembly options will be added here -->
-            </select>
+        <div class="section">
+            <h2>Select Roofing Assembly</h2>
+            <div class="input-group">
+                <label for="assemblySelect">Roofing Assembly:</label>
+                <select id="assemblySelect">
+                    <!-- Assembly options will be added here -->
+                </select>
+            </div>
         </div>
 
         <button onclick="performCalculations()">Calculate</button>
 
         <!-- Results Section -->
-        <div class="output-section">
+        <div class="section result-section">
             <h2>Results</h2>
             <p id="windLoadResult"></p>
             <p id="assemblyResult"></p>

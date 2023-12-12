@@ -13,8 +13,8 @@ function populateAssemblyOptions() {
     const selectElement = document.getElementById('assemblySelect');
     assembliesData.forEach(assembly => {
         const option = document.createElement('option');
-        option.value = assembly.manufacturer;
-        option.textContent = assembly.manufacturer; // or any other identifier
+        option.value = assembly.manufacturer; // assuming 'manufacturer' is a unique identifier
+        option.textContent = assembly.manufacturer; // Adjust based on how you want to display the assemblies
         selectElement.appendChild(option);
     });
 }
@@ -30,7 +30,8 @@ function calculateWindLoad() {
     let roofLength = parseFloat(document.getElementById('roofLength').value);
     let locationFactor = parseFloat(document.getElementById('locationFactor').value);
 
-    let windLoad = buildingHeight * roofWidth * roofLength * locationFactor; // Placeholder calculation
+    // Placeholder for wind load calculation - replace with actual formula
+    let windLoad = buildingHeight * roofWidth * roofLength * locationFactor;
     document.getElementById('windLoadResult').innerText = `Calculated Wind Load: ${windLoad.toFixed(2)} [units]`;
 }
 
@@ -39,6 +40,7 @@ function displaySelectedAssemblyInfo() {
     const assemblyData = assembliesData.find(assembly => assembly.manufacturer === selectedAssembly);
 
     // Display relevant information about the selected assembly
-    document.getElementById('assemblyResult').innerText = `Selected Assembly: ${assemblyData.manufacturer}, Uplift Resistance: ${assemblyData.dynamicUpliftResistance.kPa} kPa`;
+    // Modify this based on what details you want to show
+    let assemblyInfo = `Selected Assembly: ${assemblyData.manufacturer}, Uplift Resistance: ${assemblyData.dynamicUpliftResistance.kPa} kPa`;
+    document.getElementById('assemblyResult').innerText = assemblyInfo;
 }
-
